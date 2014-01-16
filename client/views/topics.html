@@ -1,0 +1,24 @@
+<template name="topics">
+  {{#if currentUser}}
+    <form id="new-topic"><input type="text" placeholder="New topic" /></form>
+  {{/if}}
+  <table>
+    {{#each topics}}
+    <tr>
+      <td>
+        <strong>{{name}}</strong>
+      </td>
+      <td class="vote-count">
+        ({{pluralize 'votes' voteCount}})
+      </td>
+      <td>
+        {{#if currentUser}}
+        <button class="btn btn-xs btn-default">
+          {{#if voted}}Unvote{{else}}Vote{{/if}}
+        </button>
+        {{/if}}
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+</template>
