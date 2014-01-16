@@ -1,6 +1,6 @@
 Template.home.helpers({
   unconferences: function() {
-    return Unconferences.find(); 
+    return Unconferences.find({},{sort:{createdAt:1}}); 
   }
 });
 

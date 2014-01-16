@@ -3,6 +3,7 @@
     "bootstrap-3": {},
     "font-awesome": {},
     "iron-router": {},
-    "nprogress": {}
+    "nprogress": {},
+    "collection-hooks": {}
   }
 }

@@ -5,7 +5,8 @@
       "bootstrap-3": {},
       "font-awesome": {},
       "iron-router": {},
-      "nprogress": {}
+      "nprogress": {},
+      "collection-hooks": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -27,6 +28,11 @@
         "git": "https://github.com/zhouzhuojie/meteor-nprogress.git",
         "tag": "v0.0.3",
         "commit": "ffd1c5dd400af64121197f4e637a215c4b6b1fc7"
+      },
+      "collection-hooks": {
+        "git": "https://github.com/matb33/meteor-collection-hooks.git",
+        "tag": "v0.6.2",
+        "commit": "29484b2110206be93b01c6d11ce06ec9208de7bd"
       }
     }
   }

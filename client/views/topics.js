@@ -1,6 +1,6 @@
 Template.topics.helpers({
   topics: function() {
-   return Topics.find(); 
+    return Topics.find({},{sort:{createdAt:1}}); 
   },
   voted: function() {
     return _.contains(this.votes,Meteor.userId());
