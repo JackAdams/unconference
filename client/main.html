@@ -7,6 +7,17 @@
 </body>
 
 <template name="layout">
-  <div id="login-wrapper">{{loginButtons align="right"}}</div>
-  {{yield}}
+  <header class="navbar navbar-inverse" role="banner">
+    <div id="login-wrapper">{{loginButtons align="right"}}</div>
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Unconference</a>
+      </div>
+    </div>
+  </header>
+  <div id="content">
+    <div class="container">
+      {{yield}}
+    </div>
+  </div>
 </template>

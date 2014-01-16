@@ -1,4 +1,25 @@
+#login-wrapper {
+ float:right;
+ padding: 15px 20px;
+}
+
+#unconferences {
+ margin-top: 15px; 
+}
+
+#unconferences a:hover {
+  text-decoration: none; 
+}
+
+.topic-list {
+ margin-top: 15px; 
+}
+
 .vote-count {
   text-align: right;
   padding: 0px 20px;
+}
+
+.vote-button {
+  text-align: right;
 }
