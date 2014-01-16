@@ -1,0 +1,18 @@
+<head>
+  <title>Unconference</title>
+</head>
+
+<body>
+  {{loginButtons}}
+  {{> unconference}}
+</body>
+
+<template name="unconference">
+  <ul>
+    {{#each topics}}
+      <li>
+        {{name}} ({{voteCount}}){{#if currentUser}}<button class="btn">{{#if voted}}Unvote{{else}}Vote{{/if}}</button>{{/if}}
+      </li>
+    {{/each}}
+  </ul>
+</template>
