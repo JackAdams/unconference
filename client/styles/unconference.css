@@ -8,6 +8,10 @@
   padding: 15px 20px;
 }
 
+#unconferences-header {
+  border-radius: 0; 
+}
+
 #unconferences {
   margin-top: 15px; 
 }

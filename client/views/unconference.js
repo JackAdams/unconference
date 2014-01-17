@@ -13,7 +13,7 @@ Template.unconference_admin.helpers({
     ];
     var states = _.map(states,function(state) {
       return (tmpl.state === state.state) ? _.extend(state,{selected:true}) : state;
-    });console.log(states);
+    });
     return states;
   }
 });
