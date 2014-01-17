@@ -1,25 +1,31 @@
+.fitted-form {
+  display: inline-table;
+  min-width:400px;
+}
+
 #login-wrapper {
- float:right;
- padding: 15px 20px;
+  float:right;
+  padding: 15px 20px;
 }
 
 #unconferences {
- margin-top: 15px; 
+  margin-top: 15px; 
 }
 
 #unconferences a:hover {
   text-decoration: none; 
 }
 
-.topic-list {
- margin-top: 15px; 
+table.topic-list {
+  margin-top: 15px; 
 }
 
 .vote-count {
-  text-align: right;
-  padding: 0px 20px;
+  text-align: left;
+  padding: 0px 5px;
 }
 
 .vote-button {
-  text-align: right;
+  text-align: left;
+  padding-right: 5px;
 }

@@ -21,9 +21,10 @@ Template.topics.events({
   },
   'submit #new-topic' : function(evt,tmpl) {
     evt.preventDefault();
-    var name = $('#new-topic input').val();
+    var name = $.trim($('#new-topic #new-topic-name').val());
+    var description = $.trim($('#new-topic #new-topic-description').val());
     if (name) {
-      Topics.insert({name:name,unconference_id:tmpl.data._id});
+      Topics.insert({name:name,description:description,unconference_id:tmpl.data._id});
     }
     $('#new-topic input').val('');
   }

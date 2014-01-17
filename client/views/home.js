@@ -7,9 +7,10 @@ Template.home.helpers({
 Template.home.events({
   'submit #new-unconference' : function(evt) {
     evt.preventDefault();
-    var name = $('#new-unconference input').val();
+    var name = $.trim($('#new-unconference #new-unconference-name').val());
+    var description = $.trim($('#new-unconference #new-unconference-description').val());
     if (name) {
-      Unconferences.insert({name:name});
+      Unconferences.insert({name:name,description:description});
     }
     $('#new-unconference input').val('');
   }

@@ -1,12 +1,22 @@
 <template name="home">
   <h1>Unconferences</h1>
   {{#if currentUser}}
-    <form id="new-unconference"><input type="text" placeholder="New unconference" /></form>
+    <form id="new-unconference" class="fitted-form">
+      <div class="form-group">
+        <div class="input-group">
+          <input type="text" id="new-unconference-name" class="form-control" placeholder="New unconference" />
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="submit">Submit</button>
+          </span>
+        </div>
+        <textarea id="new-unconference-description" class="form-control" placeholder="Description (optional)"></textarea>
+      </div>    
+    </form>
   {{/if}}
   <div id="unconferences">
     {{#each unconferences}}
       <a href="/unconference/{{_id}}">
-        <span class="unconference btn btn-primary">
+        <span class="unconference btn btn-primary" title="{{description}}">
           {{name}}  
         </span>
       </a>
