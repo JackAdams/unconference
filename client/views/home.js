@@ -12,6 +12,6 @@ Template.home.events({
     if (name) {
       Unconferences.insert({name:name,description:description});
     }
-    $('#new-unconference input').val('');
+    $('#new-unconference input, #new-unconference textarea').val('');
   }
 });

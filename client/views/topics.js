@@ -26,6 +26,6 @@ Template.topics.events({
     if (name) {
       Topics.insert({name:name,description:description,unconference_id:tmpl.data._id});
     }
-    $('#new-topic input').val('');
+    $('#new-topic input, #new-topic textarea').val('');
   }
 });

@@ -1,4 +1,11 @@
 <template name="unconference">
-  <h1>{{name}}</h1>
+  <div class="alert alert-info">
+    <div class="container">
+      <h1>{{name}}</h1>
+      {{#if description}}
+        <h3 class="text-muted">{{description}}</h3>
+      {{/if}}
+    </div>
+  </div>
   {{> topics}}
 </template>
