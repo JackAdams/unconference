@@ -16,6 +16,6 @@ changeTopicPermissionCheck = function(userId,doc,fields) {
     return !!Meteor.userId();
   }
   else {
-    return doc.userId === Meteor.userId(); 
+    return doc.user_id === Meteor.userId(); 
   }
 }
