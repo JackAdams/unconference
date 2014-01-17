@@ -7,6 +7,12 @@ Template.topics.helpers({
   },
   voteCount: function() {
    return (this.votes && this.votes.length) || 0; 
+  },
+  acceptingTopics: function(tmpl) {
+    return tmpl.state === 'acceptingTopics'; 
+  },
+  voting: function(tmpl) {
+    return tmpl.state === 'voting'; 
   }
 });
 

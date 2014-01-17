@@ -16,6 +16,16 @@
   text-decoration: none; 
 }
 
+.unconference-description {
+  margin-top: 5px; 
+}
+
+#unconference-admin {
+  width: 200px;
+  float: right;
+  margin-right: 50px;
+}
+
 table.topic-list {
   margin-top: 15px; 
 }

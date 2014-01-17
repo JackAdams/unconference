@@ -1,37 +1,43 @@
 <template name="topics">
   {{#if currentUser}}
-    <form id="new-topic" class="fitted-form">
-      <div class="form-group">
-        <div class="input-group">
-          <input type="text" id="new-topic-name" class="form-control" placeholder="New topic" />
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="submit">Submit</button>
-          </span>
-        </div>
-        <textarea type="text" id="new-topic-description" class="form-control" placeholder="Description (optional)"></textarea>
-      </div>    
-    </form>
+    {{#if acceptingTopics this}}
+      <form id="new-topic" class="fitted-form">
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" id="new-topic-name" class="form-control" placeholder="New topic" />
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit">Submit</button>
+            </span>
+          </div>
+          <textarea type="text" id="new-topic-description" class="form-control" placeholder="Description (optional)"></textarea>
+        </div>    
+      </form>
+    {{/if}}
   {{/if}}
   <div class="text-primary">Topics:</div>
   <table class="topic-list alert alert-info">
     {{#each topics}}
     <tr>
-      <td class="vote-button">
-        {{#if currentUser}}
-        <button class="btn btn-xs btn-default">
-          {{#if voted}}Unvote{{else}}Vote{{/if}}
-        </button>
-        {{/if}}
-      </td>
+      {{#if voting ../this}}
+        <td class="vote-button">
+          {{#if currentUser}}
+          <button class="btn btn-xs btn-default">
+            {{#if voted}}Unvote{{else}}Vote{{/if}}
+          </button>
+          {{/if}}
+        </td>
+      {{/if}}
       <td>
         <strong>{{name}}</strong>
         {{#if description}}
           &nbsp;<em class="text-muted small">{{description}}</em>
         {{/if}}
       </td>
-      <td class="vote-count">
-        ({{pluralize 'votes' voteCount}})
-      </td>
+      {{#unless acceptingTopics ../this}}
+        <td class="vote-count small">
+          ({{pluralize 'votes' voteCount}})
+        </td>
+      {{/unless}}
     </tr>
     {{/each}}
   </table>

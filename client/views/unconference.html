@@ -1,11 +1,24 @@
 <template name="unconference">
   <div class="alert alert-info">
-    <div class="container">
+    <div class="container">     
+      {{#if userIsCreator}}
+        {{> unconference_admin}}
+      {{/if}}
       <h1>{{name}}</h1>
       {{#if description}}
-        <h3 class="text-muted">{{description}}</h3>
+        <h3 class="text-muted unconference-description">{{description}}</h3>
       {{/if}}
     </div>
   </div>
   {{> topics}}
+</template>
+
+<template name="unconference_admin">
+  <div id="unconference-admin" class="">
+    <ul class="nav nav-pills nav-stacked">
+      {{#each unconferenceStates this}}
+      <li class="unconference-state{{#if selected}} active{{/if}}"><a href="#">{{name}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
 </template>
