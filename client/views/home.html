@@ -4,6 +4,15 @@
       <h1>Unconferences</h1>
     </div>
   </div>
+  <div id="unconferences">
+    {{#each unconferences}}
+      <a href="/unconference/{{_id}}">
+        <span class="unconference btn btn-primary" title="{{description}}">
+          {{name}}  
+        </span>
+      </a>
+    {{/each}}
+  </div>
   {{#if currentUser}}
     <form id="new-unconference" class="fitted-form">
       <div class="form-group">
@@ -17,13 +26,4 @@
       </div>    
     </form>
   {{/if}}
-  <div id="unconferences">
-    {{#each unconferences}}
-      <a href="/unconference/{{_id}}">
-        <span class="unconference btn btn-primary" title="{{description}}">
-          {{name}}  
-        </span>
-      </a>
-    {{/each}}
-  </div>
 </template>

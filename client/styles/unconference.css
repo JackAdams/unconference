@@ -24,6 +24,10 @@
   margin-top: 5px; 
 }
 
+#new-unconference {
+ margin-top: 20px; 
+}
+
 #unconference-admin {
   width: 200px;
   float: right;
