@@ -4,6 +4,7 @@
     "font-awesome": {},
     "iron-router": {},
     "nprogress": {},
-    "collection-hooks": {}
+    "collection-hooks": {},
+    "accounts-ui-bootstrap-3": {}
   }
 }
